@@ -2,7 +2,7 @@
 -export([slugify/1, translit/1]).
 
 slugify(<< C/utf8, Rest/binary >>) ->
-    [translit(C)] ++ slugify(Rest);
+    lists:flatten([translit(C)] ++ slugify(Rest));
 slugify(<<>>) -> [].
 
 translit(131) -> $f;
