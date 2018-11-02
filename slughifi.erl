@@ -1,5 +1,5 @@
 %%
-%% This module contains the exhausting transliteration map
+%% This module contains the exhausting transliteration map.
 %%
 -module(slughifi).
 -export([slugify/1, translit/1]).
@@ -1008,4 +1008,6 @@ translit(7763) -> $o;
 translit(543) -> $h;
 translit(42793) -> "tz";
 translit(7867) -> $e;
+translit(1108) -> $e;
+translit(1111) -> $i;
 translit(C) -> C.
